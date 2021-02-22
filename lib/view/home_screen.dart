@@ -1,44 +1,43 @@
 import 'package:ecommerce_app/view/widgets/custom_text.dart';
+import 'package:ecommerce_app/view/widgets/products_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // final screenHight = MediaQuery.of(context).size.height;
+    // final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         body: SafeArea(
-      child: Container(
-        padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-        child: Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.grey.shade300),
-              child: Center(
-                child: _searchTextFormField(),
+      child: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.grey.shade300),
+                child: Center(
+                  child: _searchTextFormField(),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            CustomText(
-              text: 'Categories',
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),
-            SizedBox(height: 20),
-            _listViewCategory()
-            // ListView.builder(
-            //     itemCount: 10,
-            //     scrollDirection: Axis.horizontal,
-            //     itemBuilder: (ctx, index) => Column(
-            //           children: [
-            //             CircleAvatar(
-            //                 child: Image.asset('assets/facebook_icon.png'))
-            //           ],
-            //         ))
-          ],
+              SizedBox(
+                height: 20,
+              ),
+              CustomText(
+                text: 'Categories',
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+              SizedBox(height: 20),
+              _listViewCategory(),
+              SizedBox(height: 50),
+              ProductList()
+            ],
+          ),
         ),
       ),
     ));
@@ -48,7 +47,7 @@ class HomeScreen extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: Colors.grey.shade200,
+        color: Color(0xFFE6E6E6),
       ),
       child: TextFormField(
         decoration: InputDecoration(
@@ -84,12 +83,12 @@ class HomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                   color: Colors.grey.shade200,
                 ),
-                height: 50,
-                width: 50,
+                height: 60,
+                width: 60,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Image.asset(
-                    'assets/icon_shoes.png',
+                  child: SvgPicture.asset(
+                    'assets/icon_shoes.svg',
                     height: 30,
                   ),
                 ),

@@ -17,6 +17,7 @@ class AuthViewModel extends GetxController {
   @override
   void onInit() {
     super.onInit();
+    // _user.bindStream(_auth.authStateChanges());
   }
 
   @override

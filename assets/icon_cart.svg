@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19.871" height="20" viewBox="0 0 19.871 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="19.871" height="20" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="icon_cart" clip-path="url(#clip-path)">
+    <g id="Group_183" data-name="Group 183">
+      <path id="Path_2" data-name="Path 2" d="M17.333,3.6h-6.64a1.01,1.01,0,0,0-1,1.16,1,1,0,0,0,1,.84h6.6a.571.571,0,0,1,.44.2.538.538,0,0,1,.12.48l-1.52,7.28a.561.561,0,0,1-.56.48H9.333a.561.561,0,0,1-.56-.48L6.573.8a.95.95,0,0,0-.96-.8h-4.6a.992.992,0,0,0-.96,1.24.989.989,0,0,0,1,.76h3.72l2.04,11.88A2.537,2.537,0,0,0,9.333,16h6.48a2.537,2.537,0,0,0,2.52-2.12l1.52-7.28A2.573,2.573,0,0,0,17.333,3.6Z" transform="translate(-0.022)" fill="#111"/>
+      <path id="Path_3" data-name="Path 3" d="M30.1,20a1,1,0,1,0,0-2H26.9a1,1,0,0,0,0,2Z" transform="translate(-15.549 -10.8)" fill="#111"/>
+    </g>
+    <g id="Group_184" data-name="Group 184" transform="translate(8.351 10.4)">
+      <circle id="Ellipse_15" data-name="Ellipse 15" cx="1.4" cy="1.4" r="1.4" transform="translate(0 6.8)" fill="#00c569"/>
+      <circle id="Ellipse_16" data-name="Ellipse 16" cx="1.4" cy="1.4" r="1.4" transform="translate(5.6 6.8)" fill="#00c569"/>
+      <path id="Path_4" data-name="Path 4" d="M30.9,27a.99.99,0,0,0-1-1h-2a1,1,0,1,0,0,2h2A.99.99,0,0,0,30.9,27Z" transform="translate(-24.5 -26)" fill="#00c569"/>
+    </g>
+  </g>
+</svg>
