@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/core/view_model/auth_view_model.dart';
-import 'package:ecommerce_app/core/view_model/home_view_model.dart';
+import 'package:ecommerce_app/core/view_model/control_view_model.dart';
 import 'package:ecommerce_app/view/authentication/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +13,7 @@ class ControllerView extends GetWidget<AuthViewModel> {
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (ctx, snapshot) {
         if (snapshot.hasData) {
-          return GetBuilder<HomeViewModel>(
+          return GetBuilder<ContorlViewModel>(
             builder: (controller) => Scaffold(
               body: controller.currentScreen,
               bottomNavigationBar: bottomNavigationBar(),
@@ -27,8 +27,8 @@ class ControllerView extends GetWidget<AuthViewModel> {
   }
 
   Widget bottomNavigationBar() {
-    return GetBuilder<HomeViewModel>(
-      init: HomeViewModel(),
+    return GetBuilder<ContorlViewModel>(
+      init: ContorlViewModel(),
       builder: (controller) => BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
