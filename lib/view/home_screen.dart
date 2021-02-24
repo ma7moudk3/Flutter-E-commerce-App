@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
     // final screenHight = MediaQuery.of(context).size.height;
     // final screenWidth = MediaQuery.of(context).size.width;
     return GetBuilder<HomeViewModel>(
+      init: Get.find(),
       builder: (controller) => Scaffold(
           body: SafeArea(
         child: SingleChildScrollView(
