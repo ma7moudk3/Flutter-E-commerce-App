@@ -128,7 +128,7 @@ class ProductDetailsScreen extends StatelessWidget {
                           textColor: Colors.grey,
                         ),
                         CustomText(
-                          text: ' \$' + product.price,
+                          text: ' \$' + product.price.toString(),
                           textColor: Theme.of(context).primaryColor,
                           fontSize: 18,
                         )
@@ -144,6 +144,7 @@ class ProductDetailsScreen extends StatelessWidget {
                             image: product.image,
                             name: product.name,
                             price: product.price,
+                            id: product.id,
                             quantity: 1,
                           ));
                         },

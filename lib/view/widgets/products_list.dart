@@ -75,7 +75,8 @@ class ProductList extends StatelessWidget {
                       height: 8,
                     ),
                     CustomText(
-                      text: controller.productModel[index].price + " \$",
+                      text: controller.productModel[index].price.toString() +
+                          " \$",
                       textColor: Theme.of(context).primaryColor,
                       alignment: Alignment.topLeft,
                     ),

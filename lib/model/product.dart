@@ -1,7 +1,12 @@
 class ProductModel {
-  String name, image, description, sized, price;
+  String name, image, description, sized, price, id;
   ProductModel(
-      {this.name, this.image, this.description, this.sized, this.price});
+      {this.name,
+      this.image,
+      this.description,
+      this.sized,
+      this.price,
+      this.id});
 
   ProductModel.fromJson(Map<dynamic, dynamic> map) {
     if (map == null) {
@@ -13,6 +18,7 @@ class ProductModel {
     description = map['description'];
     sized = map['sized'];
     price = map['price'];
+    id = map['id'];
   }
 
   toJson() {
@@ -22,6 +28,7 @@ class ProductModel {
       'description': description,
       'sized': sized,
       'price': price,
+      'id': id,
     };
   }
 }

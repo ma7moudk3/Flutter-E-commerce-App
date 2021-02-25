@@ -9,6 +9,7 @@ class DBHelper {
   static final String columnImage = 'image';
   static final String columnPrice = 'price';
   static final String columnQuantity = 'quantity';
+  static final String columnid = 'id';
 
   Future<Database> initDataBase() async {
     if (database == null) {
@@ -29,7 +30,8 @@ class DBHelper {
             $columnName TEXT NOT NULL,
             $columnImage TEXT NOT NULL,
             $columnPrice TEXT NOT NULL,
-            $columnQuantity INTEGER
+            $columnQuantity INTEGER,
+            $columnid TEXT NOT NULL
             )
             ''');
       });
@@ -55,7 +57,13 @@ class DBHelper {
     List<CartProductModel> list = maps.isNotEmpty
         ? maps.map((e) => CartProductModel.fromJson(e)).toList()
         : [];
-    print('list length :' + maps.length.toString());
+    print('maps length :' + maps.length.toString());
     return list;
+  }
+
+  updateProduct(CartProductModel product) async {
+    database = await initDataBase();
+    await database.update(tableName, product.toJson(),
+        where: '$columnid =?', whereArgs: [product.id]);
   }
 }

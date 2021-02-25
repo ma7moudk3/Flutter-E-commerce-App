@@ -42,7 +42,7 @@ class CartScreen extends StatelessWidget {
                               height: 10,
                             ),
                             CustomText(
-                              text: controller.products[index].price,
+                              text: controller.products[index].price.toString(),
                               fontSize: 17,
                               textColor: Theme.of(context).primaryColor,
                               alignment: Alignment.topLeft,
@@ -57,26 +57,37 @@ class CartScreen extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
-                                    Icons.add,
-                                    color: Colors.grey,
-                                    size: 18,
+                                  InkWell(
+                                    onTap: () {
+                                      controller.increaseQuantity(index);
+                                    },
+                                    child: Icon(
+                                      Icons.add,
+                                      color: Colors.grey,
+                                      size: 18,
+                                    ),
                                   ),
                                   SizedBox(
                                     width: 20,
                                   ),
                                   CustomText(
-                                    text: '1',
+                                    text: controller.products[index].quantity
+                                        .toString(),
                                     textColor: Colors.grey,
                                     alignment: Alignment.center,
                                   ),
                                   SizedBox(
                                     width: 20,
                                   ),
-                                  Icon(
-                                    Icons.minimize,
-                                    color: Colors.grey,
-                                    size: 18,
+                                  InkWell(
+                                    onTap: () {
+                                      controller.deCreaseQuantity(index);
+                                    },
+                                    child: Icon(
+                                      Icons.minimize,
+                                      color: Colors.grey,
+                                      size: 18,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -100,11 +111,13 @@ class CartScreen extends StatelessWidget {
                   fontSize: 12,
                   textColor: Colors.grey,
                 ),
-                CustomText(
-                  text: '258 \$',
-                  textColor: Theme.of(context).primaryColor,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                GetBuilder<CartViewModel>(
+                  builder: (controller) => CustomText(
+                    text: '${controller.totalPrice.toString()} \$',
+                    textColor: Theme.of(context).primaryColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 )
               ],
             ),
