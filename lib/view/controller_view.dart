@@ -14,6 +14,7 @@ class ControllerView extends GetWidget<AuthViewModel> {
       builder: (ctx, snapshot) {
         if (snapshot.hasData) {
           return GetBuilder<ContorlViewModel>(
+            init: ContorlViewModel(),
             builder: (controller) => Scaffold(
               body: controller.currentScreen,
               bottomNavigationBar: bottomNavigationBar(),
@@ -28,7 +29,7 @@ class ControllerView extends GetWidget<AuthViewModel> {
 
   Widget bottomNavigationBar() {
     return GetBuilder<ContorlViewModel>(
-      init: ContorlViewModel(),
+      init: Get.find(),
       builder: (controller) => BottomNavigationBar(
         items: [
           BottomNavigationBarItem(

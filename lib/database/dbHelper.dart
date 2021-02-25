@@ -1,15 +1,9 @@
+import 'package:ecommerce_app/helper/constants.dart';
 import 'package:ecommerce_app/model/cart_product_model.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DBHelper {
   Database database;
-  static final String dbName = '/ecommerce.db';
-  static final String tableName = 'cartProduct';
-  static final String columnName = 'name';
-  static final String columnImage = 'image';
-  static final String columnPrice = 'price';
-  static final String columnQuantity = 'quantity';
-  static final String columnid = 'id';
 
   Future<Database> initDataBase() async {
     if (database == null) {
