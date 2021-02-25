@@ -14,7 +14,7 @@ class LocalStorageData extends GetxController {
       }
       return user;
     } catch (e) {
-      print('get user error :' + e);
+      print('get user error :' + e.toString());
       return null;
     }
   }

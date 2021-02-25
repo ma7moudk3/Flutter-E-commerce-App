@@ -1,0 +1,13 @@
+<svg id="icon_click" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Group_190" data-name="Group 190" transform="translate(9.211 7.251)">
+    <path id="Path_15" data-name="Path 15" d="M24.537,21.917l3.6-1.96a.984.984,0,0,0,.32-1.36h0a.984.984,0,0,0-1.36-.32l-3.6,1.96a.984.984,0,0,0-.32,1.36h0A.951.951,0,0,0,24.537,21.917Z" transform="translate(-23.028 -18.128)" fill="#00c569"/>
+  </g>
+  <g id="Group_193" data-name="Group 193">
+    <g id="Group_191" data-name="Group 191">
+      <path id="Path_16" data-name="Path 16" d="M10,0A10,10,0,1,0,20,10,10,10,0,0,0,10,0Zm0,18a8,8,0,1,1,8-8A8.024,8.024,0,0,1,10,18Z" fill="#111"/>
+    </g>
+    <g id="Group_192" data-name="Group 192" transform="translate(5.059 5.219)">
+      <path id="Path_17" data-name="Path 17" d="M14.309,13.309a.992.992,0,0,0-1.32,1.48l4.16,4a.992.992,0,0,0,1.32-1.48Z" transform="translate(-12.648 -13.048)" fill="#111"/>
+    </g>
+  </g>
+</svg>
