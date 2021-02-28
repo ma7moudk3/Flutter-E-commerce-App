@@ -60,31 +60,39 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  Padding profileListTile(String title, String icon) {
-    return Padding(
-      padding: EdgeInsets.only(top: 20),
-      child: ListTile(
-          leading: Container(
-              height: 40,
-              width: 40,
-              padding: EdgeInsets.all(7),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: Color(0x1200C569)),
-              child: SvgPicture.asset(
-                'assets/$icon',
-                height: 20,
-                width: 20,
+  GetBuilder<ProfileViewModel> profileListTile(String title, String icon,
+      {Function onTap}) {
+    return GetBuilder<ProfileViewModel>(
+      builder: (controller) => InkWell(
+        onTap: () {
+          controller.signOut();
+        },
+        child: Padding(
+          padding: EdgeInsets.only(top: 20),
+          child: ListTile(
+              leading: Container(
+                  height: 40,
+                  width: 40,
+                  padding: EdgeInsets.all(7),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Color(0x1200C569)),
+                  child: SvgPicture.asset(
+                    'assets/$icon',
+                    height: 20,
+                    width: 20,
+                  )),
+              title: CustomText(
+                text: title,
+                fontSize: 16,
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.black,
+                size: 15,
               )),
-          title: CustomText(
-            text: title,
-            fontSize: 16,
-          ),
-          trailing: Icon(
-            Icons.arrow_forward_ios,
-            color: Colors.black,
-            size: 15,
-          )),
+        ),
+      ),
     );
   }
 }

@@ -20,6 +20,9 @@ class AuthViewModel extends GetxController {
   void onInit() {
     super.onInit();
     // _user.bindStream(_auth.authStateChanges());
+    if (_auth.currentUser != null) {
+      getCurrentUserData(_auth.currentUser.uid);
+    }
   }
 
   @override
@@ -62,9 +65,8 @@ class AuthViewModel extends GetxController {
       await _auth
           .signInWithEmailAndPassword(email: email, password: password)
           .then((value) async {
-        await FireStoreUser().getCurrentUser(value.user.uid).then((value) {
-          saveUserInShared(UserModel.fromJson(value.data()));
-        });
+        getCurrentUserData(value.user.uid);
+        //   saveUserInShared(UserModel.fromJson(value.data()));
       });
       Get.offAll(ControllerView());
     } catch (e) {
@@ -99,5 +101,11 @@ class AuthViewModel extends GetxController {
 
   void saveUserInShared(UserModel user) async {
     await localStorageData.setUser(user);
+  }
+
+  void getCurrentUserData(String uid) async {
+    await FireStoreUser().getCurrentUser(uid).then((value) {
+      saveUserInShared(UserModel.fromJson(value.data()));
+    });
   }
 }
