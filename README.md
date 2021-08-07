@@ -1,16 +1,10 @@
-# ecommerce_app
+# Flutter-E-commerce-App
 
-A new Flutter project.
+note: This Application Based on (Pesa Flutter Course on Youtube)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ✨ Images form App
+![Account](https://user-images.githubusercontent.com/76075722/128597981-bb5eec0f-b228-4100-838b-d79970ff6741.png)
+![Auth](https://user-images.githubusercontent.com/76075722/128597983-cb38df59-7601-4171-9c9c-1d2804b83efe.png)
+![Cart](https://user-images.githubusercontent.com/76075722/128597988-0812eaea-ca10-4c50-a0e8-07509ff26177.png)
+![CheckOut](https://user-images.githubusercontent.com/76075722/128597991-14c668c3-4c77-4220-bc34-486ff9489068.png)
+![Home](https://user-images.githubusercontent.com/76075722/128597996-cd016357-e7d8-476f-8c68-5d0a1dd37daf.png)
